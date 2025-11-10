@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+body {
+  @apply m-0;
+  font-family: 'Press Start 2P', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply bg-linear-to-b from-sky-400 to-sky-600 min-h-screen flex flex-col items-center justify-center text-center text-white pt-8 pb-16;
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button,
+a:not([href*="https://tenor"])
+{
+  @apply cursor-pointer bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl shadow-[0_4px_0_#15803d] active:translate-y-0.5 active:shadow-[0_2px_0_#15803d] transition;
+}
+
+h1 {
+  @apply text-3xl md:text-5xl text-yellow-300 drop-shadow-[2px_2px_0_#000] mb-6;
+}
+
+h2 {
+  @apply text-xl md:text-3xl text-yellow-300 drop-shadow-[2px_2px_0_#000] mb-6;
+}
+
+p {
+  @apply max-w-md text-sm md:text-base text-white drop-shadow-[1px_1px_0_#000];
+}

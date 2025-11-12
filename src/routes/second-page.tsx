@@ -6,12 +6,12 @@ export const Route = createFileRoute('/second-page')({
 
 function RouteComponent() {
   return (
-    <div className="flex flex-col items-center px-6 text-left">
+    <div className="flex flex-col items-center p-6 pb-16 text-left">
       <h1>Testes Ortopédicos</h1>
-      <h2 className="underline w-full decoration-yellow-300 mt-4">
+      <h2 className="underline w-full decoration-slate-600 pb-2 mt-8">
         Teste de Neer
       </h2>
-      <div className="grid gap-4 mb-6">
+      <div className="grid w-full gap-2 mb-6">
         <p>- Objetivo: reproduzir impacto subacromial.</p>
         <p>- Como fazer: elevação passiva completa do braço em flexão.</p>
         <p>- Teste positivo: dor anterior no ombro.</p>
@@ -26,10 +26,10 @@ function RouteComponent() {
         allowFullScreen
       ></iframe>
 
-      <h2 className="underline w-full decoration-yellow-300 mt-12">
+      <h2 className="underline w-full decoration-slate-600 pb-2 mt-12">
         Teste de Hawkins-Kennedy
       </h2>
-      <div className="grid gap-4 mb-6">
+      <div className="grid w-full gap-2 mb-6">
         <p>- Objetivo: comprimir estruturas subacromiais.</p>
         <p>- Teste positivo: dor na rotação interna em 90° de flexão.</p>
       </div>
@@ -43,10 +43,10 @@ function RouteComponent() {
         allowFullScreen
       ></iframe>
 
-      <h2 className="underline w-full decoration-yellow-300 mt-12">
+      <h2 className="underline w-full decoration-slate-600 pb-2 mt-12">
         Teste de Jobe
       </h2>
-      <div className="grid gap-4 mb-6">
+      <div className="grid gap-2 w-full mb-6">
         <p>- (Empty Can Test) – Supraespinhal</p>
         <p>- Útil para diferenciar impacto x tendinopatia</p>
       </div>
@@ -60,10 +60,10 @@ function RouteComponent() {
         allowFullScreen
       ></iframe>
 
-      <h2 className="underline w-full decoration-yellow-300 mt-12">
+      <h2 className="underline w-full decoration-slate-600 pb-2 mt-12">
         Teste de Patte
       </h2>
-      <div className="grid gap-4 mb-6">
+      <div className="grid w-full gap-2 mb-6">
         <p>- (Hornblower) – Infraespinhal</p>
         <p>- Indica déficit de rotadores externos.</p>
       </div>

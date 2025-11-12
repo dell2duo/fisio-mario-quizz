@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TopicsRouteImport } from './routes/topics'
 import { Route as ThirdPageRouteImport } from './routes/third-page'
 import { Route as SecondPageRouteImport } from './routes/second-page'
+import { Route as FourthPageRouteImport } from './routes/fourth-page'
 import { Route as FirstPageRouteImport } from './routes/first-page'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DemoStartServerFuncsRouteImport } from './routes/demo/start.server-funcs'
@@ -35,6 +36,11 @@ const ThirdPageRoute = ThirdPageRouteImport.update({
 const SecondPageRoute = SecondPageRouteImport.update({
   id: '/second-page',
   path: '/second-page',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FourthPageRoute = FourthPageRouteImport.update({
+  id: '/fourth-page',
+  path: '/fourth-page',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FirstPageRoute = FirstPageRouteImport.update({
@@ -86,6 +92,7 @@ const DemoStartSsrDataOnlyRoute = DemoStartSsrDataOnlyRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/first-page': typeof FirstPageRoute
+  '/fourth-page': typeof FourthPageRoute
   '/second-page': typeof SecondPageRoute
   '/third-page': typeof ThirdPageRoute
   '/topics': typeof TopicsRoute
@@ -100,6 +107,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/first-page': typeof FirstPageRoute
+  '/fourth-page': typeof FourthPageRoute
   '/second-page': typeof SecondPageRoute
   '/third-page': typeof ThirdPageRoute
   '/topics': typeof TopicsRoute
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/first-page': typeof FirstPageRoute
+  '/fourth-page': typeof FourthPageRoute
   '/second-page': typeof SecondPageRoute
   '/third-page': typeof ThirdPageRoute
   '/topics': typeof TopicsRoute
@@ -131,6 +140,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/first-page'
+    | '/fourth-page'
     | '/second-page'
     | '/third-page'
     | '/topics'
@@ -145,6 +155,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/first-page'
+    | '/fourth-page'
     | '/second-page'
     | '/third-page'
     | '/topics'
@@ -159,6 +170,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/first-page'
+    | '/fourth-page'
     | '/second-page'
     | '/third-page'
     | '/topics'
@@ -174,6 +186,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FirstPageRoute: typeof FirstPageRoute
+  FourthPageRoute: typeof FourthPageRoute
   SecondPageRoute: typeof SecondPageRoute
   ThirdPageRoute: typeof ThirdPageRoute
   TopicsRoute: typeof TopicsRoute
@@ -207,6 +220,13 @@ declare module '@tanstack/react-router' {
       path: '/second-page'
       fullPath: '/second-page'
       preLoaderRoute: typeof SecondPageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fourth-page': {
+      id: '/fourth-page'
+      path: '/fourth-page'
+      fullPath: '/fourth-page'
+      preLoaderRoute: typeof FourthPageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/first-page': {
@@ -278,6 +298,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FirstPageRoute: FirstPageRoute,
+  FourthPageRoute: FourthPageRoute,
   SecondPageRoute: SecondPageRoute,
   ThirdPageRoute: ThirdPageRoute,
   TopicsRoute: TopicsRoute,

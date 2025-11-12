@@ -36,10 +36,16 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=TASA+Orbiter:wght@400..800&family=WDXL+Lubrifont+SC&display=swap"
           rel="stylesheet"
-        ></link>
+        />
       </head>
       <body>
         {children}
@@ -55,8 +61,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           ]}
         /> */}
         <Scripts />
-        <footer className="fixed bottom-0 p-2 text-xs bg-sky-600">
-          Daniela Reis & Leonardo Matiolli - 8º Período - Uniacademia
+        <footer className="fixed font-semibold w-full bottom-0 p-2 text-base text-center text-gray-900 bg-white">
+          Daniela Reis & Leonardo Matiolli <br /> 8º Período - Uniacademia
         </footer>
       </body>
     </html>

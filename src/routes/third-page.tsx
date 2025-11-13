@@ -50,7 +50,7 @@ const questions = [
 function RouteComponent() {
   return (
     <div className="flex flex-col gap-6 items-center p-6 pb-24 text-left">
-      <h1>Testes Ortopédicos</h1>
+      <h1>Causas e Características</h1>
       {questions.map((question) => (
         <div
           key={question.id}

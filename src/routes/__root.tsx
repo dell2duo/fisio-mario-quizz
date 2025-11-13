@@ -2,8 +2,6 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
-import Header from '../components/Header'
-
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
@@ -49,7 +47,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        {/* <TanStackDevtools
+        <TanStackDevtools
           config={{
             position: 'bottom-right',
           }}
@@ -59,7 +57,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               render: <TanStackRouterDevtoolsPanel />,
             },
           ]}
-        /> */}
+        />
         <Scripts />
         <footer className="fixed font-semibold w-full bottom-0 p-2 text-base text-center text-gray-900 bg-white">
           Daniela Reis & Leonardo Matiolli <br /> 8º Período - Uniacademia
